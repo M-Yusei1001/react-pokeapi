@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function hello() {
+function useHello() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
   return (
-    <div>Hello world!</div>
-  )
+    <div>
+      <div>
+        <h1>Hello world!</h1>
+      </div>
+      <div>
+        <p>{count}</p>
+        <button onClick={handleClick}>+</button>
+      </div>
+    </div>
+  );
 }
 
-export default hello
+useHello;
