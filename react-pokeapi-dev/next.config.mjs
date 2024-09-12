@@ -10,6 +10,16 @@ const nextConfig = {
         }
         return config;
     },
+    images:{
+        remotePatterns:[
+            {
+                protocol:'https',
+                hostname: 'www.pokemon.com',
+                port:'',
+                pathname:'/static-assets/content-assets/**',
+            },
+        ],
+    },
 };
 
 export default nextConfig;
