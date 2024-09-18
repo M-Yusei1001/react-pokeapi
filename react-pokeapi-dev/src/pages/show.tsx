@@ -7,24 +7,19 @@ const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
   event.preventDefault();
   const form = new FormData(event.currentTarget);
   const pokedexId = form.get("pokedexId") || "";
-}
+};
 
 export default function ShowPokemon() {
-
   return (
     <div>
       <div>
         <form onSubmit={handleSubmit}>
           <label>
             <span>Pokedex ID</span>
-            <input
-              type="text"
-              name="pokedexId"
-              id="pokedexId"
-            />
+            <input type="text" name="pokedexId" id="pokedexId" />
           </label>
-            <button type="submit">送信</button>
-          </form>
+          <button type="submit">送信</button>
+        </form>
       </div>
       <PokeName pokedexId={1} />
       <PokeImage pokedexId={1} />
