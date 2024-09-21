@@ -23,6 +23,7 @@ export default function pokeImage({ pokedexId }: { pokedexId: number }) {
         width={250}
         height={250}
         alt="pokemon"
+        loading="lazy"
       />
     </>
   );
